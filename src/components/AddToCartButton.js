@@ -31,11 +31,11 @@ export default function AddToCartButton({ productId, disabled, compact = false }
       <button
         onClick={add}
         disabled={disabled || busy}
-        className={`rounded bg-black text-white disabled:opacity-40 ${compact ? "w-full py-1.5 text-sm" : "px-6 py-3"}`}
+        className={`rounded-xl font-semibold transition disabled:cursor-not-allowed disabled:opacity-50 ${compact ? "w-full bg-gradient-to-r from-violet-600 to-indigo-600 py-2 text-sm text-white shadow-md shadow-violet-500/25 hover:shadow-lg" : "bg-slate-900 px-6 py-3 text-white hover:bg-slate-800"}`}
       >
         {disabled ? "Out of stock" : busy ? "Adding…" : "Add to cart"}
       </button>
-      {msg && <p className={`mt-1 text-green-700 ${compact ? "text-xs" : "text-sm"}`}>{msg}</p>}
+      {msg && <p className={`mt-2 ${compact ? "text-xs text-emerald-700" : "text-sm text-emerald-700"}`}>{msg}</p>}
     </div>
   );
 }

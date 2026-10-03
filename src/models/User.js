@@ -10,6 +10,7 @@ const userSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true, lowercase: true },
   password: { type: String, required: true },   // bcrypt hash, never plain text
   addresses: [addressSchema],                   // saved delivery addresses
+  wishlist: [{ type: mongoose.Schema.Types.ObjectId, ref: "Product" }],
 }, { timestamps: true });
 
 export default mongoose.models.User || mongoose.model("User", userSchema);
