@@ -4,3 +4,4 @@ import AuthForm from "@/components/AuthForm";
 export default function RegisterPage() {
   return <Suspense><AuthForm mode="register" /></Suspense>;
 }
+//push
